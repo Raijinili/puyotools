@@ -35,7 +35,7 @@
             this.decompressSourceArchiveCheckbox = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.fileNumberAsFilenameCheckbox = new System.Windows.Forms.CheckBox();
-            this.appendFileNumberCheckbox = new System.Windows.Forms.CheckBox();
+            this.prependFileNumberCheckbox = new System.Windows.Forms.CheckBox();
             this.convertExtractedTexturesCheckbox = new System.Windows.Forms.CheckBox();
             this.extractExtractedArchivesCheckbox = new System.Windows.Forms.CheckBox();
             this.decompressExtractedFilesCheckbox = new System.Windows.Forms.CheckBox();
@@ -120,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.fileNumberAsFilenameCheckbox);
-            this.groupBox2.Controls.Add(this.appendFileNumberCheckbox);
+            this.groupBox2.Controls.Add(this.prependFileNumberCheckbox);
             this.groupBox2.Controls.Add(this.convertExtractedTexturesCheckbox);
             this.groupBox2.Controls.Add(this.extractExtractedArchivesCheckbox);
             this.groupBox2.Controls.Add(this.decompressExtractedFilesCheckbox);
@@ -142,15 +142,15 @@
             this.fileNumberAsFilenameCheckbox.Text = "Use file number as filename";
             this.fileNumberAsFilenameCheckbox.UseVisualStyleBackColor = true;
             // 
-            // appendFileNumberCheckbox
+            // prependFileNumberCheckbox
             // 
-            this.appendFileNumberCheckbox.AutoSize = true;
-            this.appendFileNumberCheckbox.Location = new System.Drawing.Point(13, 67);
-            this.appendFileNumberCheckbox.Name = "appendFileNumberCheckbox";
-            this.appendFileNumberCheckbox.Size = new System.Drawing.Size(171, 17);
-            this.appendFileNumberCheckbox.TabIndex = 3;
-            this.appendFileNumberCheckbox.Text = "Append file number to filename";
-            this.appendFileNumberCheckbox.UseVisualStyleBackColor = true;
+            this.prependFileNumberCheckbox.AutoSize = true;
+            this.prependFileNumberCheckbox.Location = new System.Drawing.Point(13, 67);
+            this.prependFileNumberCheckbox.Name = "prependFileNumberCheckbox";
+            this.prependFileNumberCheckbox.Size = new System.Drawing.Size(171, 17);
+            this.prependFileNumberCheckbox.TabIndex = 3;
+            this.prependFileNumberCheckbox.Text = "Prepend file number to filename";
+            this.prependFileNumberCheckbox.UseVisualStyleBackColor = true;
             // 
             // convertExtractedTexturesCheckbox
             // 
@@ -209,7 +209,7 @@
         private System.Windows.Forms.CheckBox convertExtractedTexturesCheckbox;
         private System.Windows.Forms.CheckBox extractExtractedArchivesCheckbox;
         private System.Windows.Forms.CheckBox decompressExtractedFilesCheckbox;
-        private System.Windows.Forms.CheckBox appendFileNumberCheckbox;
+        private System.Windows.Forms.CheckBox prependFileNumberCheckbox;
         private System.Windows.Forms.CheckBox fileNumberAsFilenameCheckbox;
     }
 }

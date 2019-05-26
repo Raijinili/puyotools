@@ -132,10 +132,10 @@ namespace PuyoTools.GUI
                                 // Use the file number as its filename
                                 outName = j.ToString("D" + archive.Entries.Count.ToString().Length) + Path.GetExtension(entry.Name);
                             }
-                            else if (settings.AppendFileNumber)
+                            else if (settings.PrependFileNumber)
                             {
-                                // Append the file number to its filename
-                                outName = Path.GetFileNameWithoutExtension(entry.Name) + j.ToString("D" + archive.Entries.Count.ToString().Length) + Path.GetExtension(entry.Name);
+                                // Prepend the file number to its filename
+                                outName = j.ToString("D" + archive.Entries.Count.ToString().Length) + "-" + Path.GetFileNameWithoutExtension(entry.Name) + Path.GetExtension(entry.Name);
                             }
                             else
                             {
@@ -318,7 +318,7 @@ namespace PuyoTools.GUI
 
             public bool DecompressExtractedFiles;
             public bool FileNumberAsFilename;
-            public bool AppendFileNumber;
+            public bool PrependFileNumber;
             public bool ExtractExtractedArchives;
             public bool ConvertExtractedTextures;
         }
@@ -343,7 +343,7 @@ namespace PuyoTools.GUI
 
             settings.DecompressExtractedFiles = decompressExtractedFilesCheckbox.Checked;
             settings.FileNumberAsFilename = fileNumberAsFilenameCheckbox.Checked;
-            settings.AppendFileNumber = appendFileNumberCheckbox.Checked && !settings.FileNumberAsFilename;
+            settings.PrependFileNumber = prependFileNumberCheckbox.Checked && !settings.FileNumberAsFilename;
             settings.ExtractExtractedArchives = extractExtractedArchivesCheckbox.Checked;
             settings.ConvertExtractedTextures = convertExtractedTexturesCheckbox.Checked;
 
